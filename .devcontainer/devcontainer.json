@@ -1,8 +1,25 @@
 {
+  "name": "singularity-auditd",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {"version": "3.11"},
     "ghcr.io/devcontainers-contrib/features/poetry:2": {},
-    "ghcr.io/devcontainers-contrib/features/ruff:1": {}
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:1": {}
+  },
+  "postCreateCommand": "bash scripts/install-dev-tools.sh",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/bin/zsh"
+          }
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff"
+      ]
+    }
   }
 }
