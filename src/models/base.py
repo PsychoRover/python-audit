@@ -3,8 +3,11 @@ from typing import Optional
 from sqlmodel import Field, SQLModel
 
 
-class BaseMessage(SQLModel, table=True):
+class AuditdMessages(SQLModel, table=True, extend_existing=True):
     id: Optional[int] = Field(default=None, primary_key=True)
+
+
+class BaseMessage(SQLModel, extend_existing=True):
     type: str
     msg: str
 

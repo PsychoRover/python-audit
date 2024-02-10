@@ -1,38 +1,28 @@
-from sqlmodel import SQLModel
+from models.base import BaseMessage
 
 
-class SysCall(SQLModel):
+class SysCall(BaseMessage):
     arch: str
-    syscall: int
+    syscall: str
     success: str
-    exit: int
+    exit: str
     a0: str
     a1: str
     a2: str
     a3: str
-    items: int
-    ppid: int
-    pid: int
-    auid: int
-    uid: int
-    gid: int
-    euid: int
-    suid: int
-    fsuid: int
-    egid: int
-    sgid: int
-    fsgid: int
+    items: str
+    ppid: str
+    pid: str
+    auid: str
+    uid: str
+    gid: str
+    euid: str
+    suid: str
+    fsuid: str
+    egid: str
+    sgid: str
+    fsgid: str
     tty: str
-    ses: int
+    ses: str
     exe: str
-    subj: str
     key: str
-
-    @classmethod
-    def from_list(cls, fields: list[str]):
-        data = {}
-        for field in fields:
-            name, value = field.split("=")
-            data[name] = value
-
-        return cls(**data)

@@ -1,5 +1,5 @@
-from sqlmodel import SQLModel
+from models.base import BaseMessage
 
 
-class Unknown(SQLModel):
-    ...
+class Unknown(BaseMessage):
+    something: str
