@@ -18,7 +18,9 @@
       },
       "extensions": [
         "ms-python.python",
-        "charliermarsh.ruff"
+        "charliermarsh.ruff",
+        "streetsidesoftware.code-spell-checker",
+        "alexcvzz.vscode-sqlite"
       ]
     }
   }
