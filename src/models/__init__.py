@@ -1,9 +1,8 @@
-from .base import AuditdMessages, BaseMessage
+from .base import BaseMessage
 from .syscall import SysCall
 from .unknown import Unknown
 
 __all__ = [
-    "AuditdMessages",
     "BaseMessage",
     "SysCall",
     "Unknown",

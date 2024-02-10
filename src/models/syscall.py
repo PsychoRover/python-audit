@@ -1,7 +1,7 @@
 from models.base import BaseMessage
 
 
-class SysCall(BaseMessage):
+class SysCall(BaseMessage, table=True):
     arch: str
     syscall: str
     success: str
