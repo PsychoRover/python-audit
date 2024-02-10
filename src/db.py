@@ -1,7 +1,8 @@
 from sqlmodel import SQLModel, create_engine
 
-sqlite_file_name = "database.sqlite"
-sqlite_url = f"sqlite:///{sqlite_file_name}"
+from src.constants import DATABASE
+
+sqlite_url = f"sqlite:///{DATABASE}"
 
 engine = create_engine(sqlite_url, echo=True)
 

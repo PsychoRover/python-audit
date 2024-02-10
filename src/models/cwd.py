@@ -1,4 +1,4 @@
-from src.models.base import BaseMessage
+from models import BaseMessage
 
 
 class Cwd(BaseMessage, table=True):

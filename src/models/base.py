@@ -2,8 +2,7 @@ from typing import Optional
 
 from sqlmodel import Field, SQLModel
 
-# class AuditdMessages(SQLModel, table=True, extend_existing=True):
-#     id: Optional[int] = Field(default=None, primary_key=True)
+from src.utils import sanitize_field_name
 
 
 class BaseMessage(SQLModel, extend_existing=True):
@@ -16,6 +15,7 @@ class BaseMessage(SQLModel, extend_existing=True):
         data = {}
         for field in fields:
             name, value = field.split("=")
+            name = sanitize_field_name(name)
             data[name] = value
 
         return cls(**data)

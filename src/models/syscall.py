@@ -1,4 +1,4 @@
-from models.base import BaseMessage
+from models import BaseMessage
 
 
 class SysCall(BaseMessage, table=True):

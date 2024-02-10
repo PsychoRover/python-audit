@@ -1,16 +1,25 @@
+import glob
+import pathlib
+
 from db import create_db_and_tables, engine
 from sqlmodel import Session
 
-from src.log_parsers import parse_log
+from src.constants import DATABASE, LOG_GLOB_PATTERN
+from src.log_parser import parse_log
 
 
 def main():
-    sys_1 = parse_log("src/auditd.log.1")
+    pathlib.Path(DATABASE).unlink(missing_ok=True)
     create_db_and_tables()
-    with Session(engine) as session:
-        session.add(sys_1)
 
-        session.commit()
+    logs = glob.glob(LOG_GLOB_PATTERN)
+
+    for log in logs:
+        messages = parse_log(log)
+        with Session(engine) as session:
+            session.add_all(messages)
+
+            session.commit()
 
 
 if __name__ == "__main__":
