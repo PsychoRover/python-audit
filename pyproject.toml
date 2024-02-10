@@ -3,7 +3,6 @@ name = "singularity-auditd"
 version = "0.1.0"
 description = ""
 authors = ["PsychoRover <gtorrent12@gmail.com>"]
-readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
