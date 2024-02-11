@@ -21,7 +21,8 @@
         "charliermarsh.ruff",
         "streetsidesoftware.code-spell-checker",
         "qwtel.sqlite-viewer",
-        "tamasfe.even-better-toml"
+        "tamasfe.even-better-toml",
+        "alexcvzz.vscode-sqlite"
       ]
     }
   }

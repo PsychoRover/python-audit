@@ -11,6 +11,7 @@
     },
     "cSpell.words": [
         "auditd",
+        "loguru",
         "sqlmodel",
         "syscall"
     ],
@@ -19,5 +20,6 @@
         "zsh": {
             "path": "/bin/zsh"
         }
-    }
+    },
+    "sqltools.useNodeRuntime": true
 }
