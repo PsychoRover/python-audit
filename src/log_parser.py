@@ -1,18 +1,14 @@
 import shlex
 
-from models import BaseMessage, Cwd, ExecVe, Path, ProcTitle, SysCall, Unknown
+from models import BaseMessage, Unknown
+
+from src.constants import MESSAGE_CLS_MAPPING
 
 MESSAGE_TYPE_LOC = 0
 
 
-def _resolver(message_type: str) -> "BaseMessage":
-    _message_cls = {
-        "CWD": Cwd,
-        "EXECVE": ExecVe,
-        "SYSCALL": SysCall,
-        "PROCTITLE": ProcTitle,
-        "PATH": Path,
-    }.get(message_type, Unknown)
+def _resolver(message_type: str) -> BaseMessage:
+    _message_cls = MESSAGE_CLS_MAPPING.get(message_type, Unknown)
 
     if _message_cls is None:
         raise ValueError(f"There is no {message_type} model.")
