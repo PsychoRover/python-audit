@@ -21,6 +21,12 @@ Might be that Poetry wouldn't set the virtualenv as the interpreter.
 - Try to run.
 
 
+## References 
+
+- [System Auditing](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/chap-system_auditing#sec-audit_system_architecture) - Red Hat
+- [RHEL Audit System Reference](https://access.redhat.com/articles/4409591#audit-record-types-2) - Red Hat
+
+
 ## License
 
 Ⓒ All Rights Reserved
