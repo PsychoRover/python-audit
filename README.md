@@ -1,11 +1,6 @@
 
 # Singularity-Audit
 
-Some comments regarding your requests:
-- Regarding point (g) where you asked for screenshots of the terminal display and database search, I have included the actual log files for your review. I hope this meets your satisfaction.
-- As for point (h) where you requested SQL queries and screenshots for certain scenarios, I intentionally utilized ORM functionality extensively instead of string queries for enhanced security purposes.
-
-
 ## Installation
 
 Build using Github Codespaces: Code -> Codespaces Tab -> Build
