@@ -2,6 +2,7 @@
   "name": "singularity-auditd",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
+    "ghcr.io/dlouwers/devcontainer-features/devbox:1": {},
     "ghcr.io/devcontainers-contrib/features/poetry:2": {},
     "ghcr.io/warrenbuckley/codespace-features/sqlite:1": {}
   },
