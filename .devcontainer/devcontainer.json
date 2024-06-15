@@ -1,5 +1,5 @@
 {
-  "name": "singularity-auditd",
+  "name": "python-audit",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
     "ghcr.io/dlouwers/devcontainer-features/devbox:1": {},
